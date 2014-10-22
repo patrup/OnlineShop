@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.conf.global_settings import TEMPLATE_DIRS
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -23,6 +24,8 @@ SECRET_KEY = '3^795pcqwavk#ye)z)-l95ap2*g2q^3@zwlvo$pn^(ypfwgt17'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 ALLOWED_HOSTS = []
 
